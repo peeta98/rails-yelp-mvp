@@ -1,0 +1,10 @@
+<h1>New restaurant</h1>
+<%= simple_form_for @restaurant do |f| %> <!-- Pass an instance or more! -->
+  <%= f.input :name %> <!-- Generates the correct input field, depending on the datatype it receives -->
+  <%= f.input :address %>
+  <%= f.input :category %>
+  <%= f.input :phone_number %>
+  <%= f.submit "Submit restaurant", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Go back", restaurants_path %>
